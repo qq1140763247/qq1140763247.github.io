@@ -1,0 +1,19 @@
+<html>
+var time = new Date();
+        // 分别获取时分秒
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
+    
+        hours = 3*60*60*-1 + hours*60*60*-1 + minutes*60*-1;
+        minutes = 15*60*-1 + minutes *60*-1 + seconds;
+        seconds = -15 + seconds * -1;
+        
+        // 获取文档节点,即分别获取文档中三个标签
+        var miao = document.getElementById('seconds');
+        var fen = document.getElementById('minites');
+        var shi = document.getElementById('hours');
+        miao.style.animationDelay = seconds + 's';
+        fen.style.animationDelay = minutes + 's';
+        shi.style.animationDelay = hours + 's';
+</html>
